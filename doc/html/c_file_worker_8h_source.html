@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Исходный файл /home/alexandr/Useful/programming/c++/QT/compressor/compressor/cFileWorker/h/cFileWorker.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('c_file_worker_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cFileWorker.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="c_file_worker_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef CFILEWORKER_H</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define CFILEWORKER_H</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="c_abstract_algorithm_8h.html">algorithm/cAbstractAlgorithm/h/cAbstractAlgorithm.h</a>&quot;</span> </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span> </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classc_file_worker.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classc_file_worker.html">cFileWorker</a> final</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classc_file_worker.html#a28c71c76f6377511c7875374147a9880">~cFileWorker</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a> <a class="code" href="classc_file_worker.html#a9b5847e31c62f43f8f35665a6a158dbc">updateWriteFile</a>( std::string_view fileWritePath );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a> <a class="code" href="classc_file_worker.html#ab716747aa7a62e8006c8f25afd99ccba">updateReadFile</a>( std::string_view fileReadPath );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::tuple&lt;std::string, eErrStatus&gt; <a class="code" href="classc_file_worker.html#a13773987881a53f8165bd691927be482">applyAlgorithm</a>( <a class="code" href="classc_abstract_algorithm.html">cAbstractAlgorithm</a> &amp;algorithm, <a class="code" href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a> action );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::ofstream mFile2Write;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::ifstream mFile2Read;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string mFile2WritePath;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::string mFile2ReadPath;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> checkPostfix( <span class="keyword">const</span> <a class="code" href="classc_abstract_algorithm.html">cAbstractAlgorithm</a> &amp;algorithm ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::tuple&lt;std::string, eErrStatus&gt; readData( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // CFILEWORKER_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassc_file_worker_html_a13773987881a53f8165bd691927be482"><div class="ttname"><a href="classc_file_worker.html#a13773987881a53f8165bd691927be482">cFileWorker::applyAlgorithm</a></div><div class="ttdeci">std::tuple&lt; std::string, eErrStatus &gt; applyAlgorithm(cAbstractAlgorithm &amp;algorithm, eTypeOfActions action)</div><div class="ttdoc">Применить алгоритм к выбранным файлам</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00042">cFileWorker.cpp:42</a></div></div>
+<div class="ttc" id="agroup___common_html_ga5ce4e82cb71185769872198fdb1e41c9"><div class="ttname"><a href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a></div><div class="ttdeci">eErrStatus</div><div class="ttdoc">Ошибки в программе</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00033">common.h:33</a></div></div>
+<div class="ttc" id="agroup___common_html_ga9edeedce6da924f2999b9f006292d733"><div class="ttname"><a href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a></div><div class="ttdeci">eTypeOfActions</div><div class="ttdoc">Возможные действия пользователя</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00025">common.h:25</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_a9b5847e31c62f43f8f35665a6a158dbc"><div class="ttname"><a href="classc_file_worker.html#a9b5847e31c62f43f8f35665a6a158dbc">cFileWorker::updateWriteFile</a></div><div class="ttdeci">eErrStatus updateWriteFile(std::string_view fileWritePath)</div><div class="ttdoc">Обновить имя файла для записи результата</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00023">cFileWorker.cpp:23</a></div></div>
+<div class="ttc" id="ac_abstract_algorithm_8h_html"><div class="ttname"><a href="c_abstract_algorithm_8h.html">cAbstractAlgorithm.h</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_ab716747aa7a62e8006c8f25afd99ccba"><div class="ttname"><a href="classc_file_worker.html#ab716747aa7a62e8006c8f25afd99ccba">cFileWorker::updateReadFile</a></div><div class="ttdeci">eErrStatus updateReadFile(std::string_view fileReadPath)</div><div class="ttdoc">Обновить имя файла для чтения исходных данных</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00033">cFileWorker.cpp:33</a></div></div>
+<div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_a28c71c76f6377511c7875374147a9880"><div class="ttname"><a href="classc_file_worker.html#a28c71c76f6377511c7875374147a9880">cFileWorker::~cFileWorker</a></div><div class="ttdeci">~cFileWorker(void)</div><div class="ttdoc">Деструктор класса</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00016">cFileWorker.cpp:16</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html"><div class="ttname"><a href="classc_file_worker.html">cFileWorker</a></div><div class="ttdoc">Класс, реализующий работу с файлами</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8h_source.html#l00042">cFileWorker.h:42</a></div></div>
+<div class="ttc" id="aclassc_abstract_algorithm_html"><div class="ttname"><a href="classc_abstract_algorithm.html">cAbstractAlgorithm</a></div><div class="ttdoc">Абстрактный класс алгоритмов сжатия данных</div><div class="ttdef"><b>Definition:</b> <a href="c_abstract_algorithm_8h_source.html#l00037">cAbstractAlgorithm.h:37</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_04b878e80dceb2b4f79e3ab50860695a.html">compressor</a></li><li class="navelem"><a class="el" href="dir_b956bca2627ac4899208259d650f1a0e.html">cFileWorker</a></li><li class="navelem"><a class="el" href="dir_c0034ea6206c2fd6dca146d34c39b3f8.html">h</a></li><li class="navelem"><a class="el" href="c_file_worker_8h.html">cFileWorker.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

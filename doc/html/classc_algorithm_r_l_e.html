@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Класс cAlgorithmRLE</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classc_algorithm_r_l_e.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classc_algorithm_r_l_e-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cAlgorithmRLE<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group___algorithm.html">Алгоритмы</a> &raquo; <a class="el" href="group___algorithm_r_l_e.html">Алгоритм RLE</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Интерфейс алгоритмов  
+ <a href="classc_algorithm_r_l_e.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="c_algorithm_r_l_e_8h_source.html">cAlgorithmRLE.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:cAlgorithmRLE:</div>
+<div class="dyncontent">
+<div class="center"><img src="classc_algorithm_r_l_e__inherit__graph.png" border="0" usemap="#c_algorithm_r_l_e_inherit__map" alt="Inheritance graph"/></div>
+<map name="c_algorithm_r_l_e_inherit__map" id="c_algorithm_r_l_e_inherit__map">
+<area shape="rect" title="Интерфейс алгоритмов" alt="" coords="20,80,137,107"/>
+<area shape="rect" href="classc_abstract_algorithm.html" title="Абстрактный класс алгоритмов сжатия данных" alt="" coords="5,5,152,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса cAlgorithmRLE:</div>
+<div class="dyncontent">
+<div class="center"><img src="classc_algorithm_r_l_e__coll__graph.png" border="0" usemap="#c_algorithm_r_l_e_coll__map" alt="Collaboration graph"/></div>
+<map name="c_algorithm_r_l_e_coll__map" id="c_algorithm_r_l_e_coll__map">
+<area shape="rect" title="Интерфейс алгоритмов" alt="" coords="20,80,137,107"/>
+<area shape="rect" href="classc_abstract_algorithm.html" title="Абстрактный класс алгоритмов сжатия данных" alt="" coords="5,5,152,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a96aa5796890972964e1e90fa227c12e3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_algorithm_r_l_e.html#a96aa5796890972964e1e90fa227c12e3">compress</a> (const std::string &amp;oldData) override</td></tr>
+<tr class="memdesc:a96aa5796890972964e1e90fa227c12e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сжатие данных  <a href="classc_algorithm_r_l_e.html#a96aa5796890972964e1e90fa227c12e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a96aa5796890972964e1e90fa227c12e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716082a22d959b7fac3ad18520004fc0"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_algorithm_r_l_e.html#a716082a22d959b7fac3ad18520004fc0">decompress</a> (const std::string &amp;oldData) override</td></tr>
+<tr class="memdesc:a716082a22d959b7fac3ad18520004fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Распаковка данных  <a href="classc_algorithm_r_l_e.html#a716082a22d959b7fac3ad18520004fc0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a716082a22d959b7fac3ad18520004fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae838694360ed9b279e664cf55a22dac6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_algorithm_r_l_e.html#ae838694360ed9b279e664cf55a22dac6">getPostfix</a> (void) const override</td></tr>
+<tr class="memdesc:ae838694360ed9b279e664cf55a22dac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить постфикс для файла  <a href="classc_algorithm_r_l_e.html#ae838694360ed9b279e664cf55a22dac6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae838694360ed9b279e664cf55a22dac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Интерфейс алгоритмов </p>
+<p>Класс реализующий алгоритм RLE </p>
+
+<p class="definition">См. определение в файле <a class="el" href="c_algorithm_r_l_e_8h_source.html">cAlgorithmRLE.h</a> строка <a class="el" href="c_algorithm_r_l_e_8h_source.html#l00068">68</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a96aa5796890972964e1e90fa227c12e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96aa5796890972964e1e90fa227c12e3">&#9670;&nbsp;</a></span>compress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cAlgorithmRLE::compress </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>oldData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сжатие данных </p>
+<p>Заголовок класса</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">oldData</td><td>Исходные данные для сжатия </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Сжатые в соответсвии с алгоритмом RLE</dd></dl>
+<hr  />
+<p> Определения публичной части класса </p>
+<p>Для результата</p>
+<p>Переменная для хранения "предыдущего" значения последовательсности</p>
+<p>С единицы, т.к. будем сравнивать с предыдущим</p>
+<p>Текущий тип последовательности (одиночный или цепочка)</p>
+<p>Счетчик. Количество одинаковых при SEQ_TYPE_SET или количество подряд идущих разных при SEQ_TYPE_SINGLE</p>
+<p>Раз совпало - уже 2 (предыдущий + текущий)</p>
+<p>Считаем</p>
+<p>Добавляем в результат</p>
+<p>Обновление "предыдущего" значения</p>
+<p>Считаем</p>
+<p>Добавляем в результат</p>
+<p>Обновление предыдущего значения и индекса</p>
+
+<p>Замещает <a class="el" href="classc_abstract_algorithm.html#a2a9ec01d2ecb5ffa715729d24094c0c8">cAbstractAlgorithm</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="c_algorithm_r_l_e_8cpp_source.html">cAlgorithmRLE.cpp</a> строка <a class="el" href="c_algorithm_r_l_e_8cpp_source.html#l00013">13</a></p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string result;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">char</span> prevVal = oldData[ 0 ];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> curIndex = 1; curIndex &lt;= oldData.size(); ++curIndex )</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        eTypeOfSequence curType = oldData[ curIndex ] == prevVal ? SEQ_TYPE_SET</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                                 : SEQ_TYPE_SINGLE;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">size_t</span> counter = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>( SEQ_TYPE_SET == curType )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            counter = 2;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">while</span>( oldData[ ++curIndex ] == prevVal &amp;&amp;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   counter &lt; MAX_SIZE_SET &amp;&amp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                   curIndex &lt; oldData.size() )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                counter++;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            result += getServiceByte( curType, counter );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            result += prevVal;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            prevVal = oldData[ curIndex ];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::string buffer;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">size_t</span> startIndex = curIndex;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">while</span>( oldData[ curIndex ] != oldData[ curIndex - 1] &amp;&amp;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                   curIndex &lt;= oldData.size() )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                prevVal = oldData[ curIndex - 1 ];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                buffer += prevVal;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                curIndex++;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            counter = curIndex - startIndex;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">while</span>( buffer.size() &gt; MAX_SIZE_SINGLE )</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                result += ( getServiceByte( curType, MAX_SIZE_SINGLE ) );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                std::move( buffer.begin(),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                           buffer.begin() + MAX_SIZE_SINGLE,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                           std::back_inserter( result ) );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                buffer.erase( buffer.begin(), buffer.begin() + MAX_SIZE_SINGLE );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            result += getServiceByte( curType, buffer.size() );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            result += buffer;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            prevVal = oldData[ curIndex ];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            curIndex--;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a716082a22d959b7fac3ad18520004fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716082a22d959b7fac3ad18520004fc0">&#9670;&nbsp;</a></span>decompress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cAlgorithmRLE::decompress </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>oldData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Распаковка данных </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">oldData</td><td>Исходные данные для распаковки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Распакованные данные в соответсвии с алгоритмом RLE </dd></dl>
+
+<p>Замещает <a class="el" href="classc_abstract_algorithm.html#ae6f252478c22f1c41848482b42a85c20">cAbstractAlgorithm</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="c_algorithm_r_l_e_8cpp_source.html">cAlgorithmRLE.cpp</a> строка <a class="el" href="c_algorithm_r_l_e_8cpp_source.html#l00088">88</a></p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string decomprData;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">size_t</span> index = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">while</span>( index &lt; oldData.size() )</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        sServiceByteInfo infoServByte = readServiceByte( oldData.data(), index );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span>( SEQ_TYPE_SET == infoServByte.mType )</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">while</span>( infoServByte.mCount-- )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                decomprData += ( oldData[ index + 1 ] );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            index += 2;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">while</span>( infoServByte.mCount -- )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                decomprData += ( oldData[ ++index ] );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            index += 1;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> decomprData;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae838694360ed9b279e664cf55a22dac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae838694360ed9b279e664cf55a22dac6">&#9670;&nbsp;</a></span>getPostfix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string cAlgorithmRLE::getPostfix </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить постфикс для файла </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка-расширение для упакованных данных </dd></dl>
+
+<p>Замещает <a class="el" href="classc_abstract_algorithm.html#a26e105e266f764658e7a678e14e30b84">cAbstractAlgorithm</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="c_algorithm_r_l_e_8h_source.html">cAlgorithmRLE.h</a> строка <a class="el" href="c_algorithm_r_l_e_8h_source.html#l00083">83</a></p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;.cmprRLE&quot;</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>/home/alexandr/Useful/programming/c++/QT/compressor/compressor/algorithm/cAlgorithmRLE/h/<a class="el" href="c_algorithm_r_l_e_8h_source.html">cAlgorithmRLE.h</a></li>
+<li>/home/alexandr/Useful/programming/c++/QT/compressor/compressor/algorithm/cAlgorithmRLE/src/<a class="el" href="c_algorithm_r_l_e_8cpp_source.html">cAlgorithmRLE.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classc_algorithm_r_l_e.html">cAlgorithmRLE</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

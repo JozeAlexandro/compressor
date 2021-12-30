@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Исходный файл /home/alexandr/Useful/programming/c++/QT/compressor/compressor/cFileWorker/src/cFileWorker.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('c_file_worker_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cFileWorker.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="c_file_worker_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="c_file_worker_8h.html">cFileWorker/h/cFileWorker.h</a>&quot;</span> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QFileInfo&gt;</span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classc_file_worker.html#a28c71c76f6377511c7875374147a9880">   16</a></span>&#160;<a class="code" href="classc_file_worker.html#a28c71c76f6377511c7875374147a9880">cFileWorker::~cFileWorker</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    mFile2Read.close();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    mFile2Write.close();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classc_file_worker.html#a9b5847e31c62f43f8f35665a6a158dbc">   23</a></span>&#160;<a class="code" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a> <a class="code" href="classc_file_worker.html#a9b5847e31c62f43f8f35665a6a158dbc">cFileWorker::updateWriteFile</a>( std::string_view fileWritePath )</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    mFile2Write.close();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mFile2WritePath = fileWritePath;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mFile2Write.open( fileWritePath.data(),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                      std::ios_base::binary | std::ios_base::out | std::ios_base::trunc );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> mFile2Write.is_open() ? <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a> : <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classc_file_worker.html#ab716747aa7a62e8006c8f25afd99ccba">   33</a></span>&#160;<a class="code" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a> <a class="code" href="classc_file_worker.html#ab716747aa7a62e8006c8f25afd99ccba">cFileWorker::updateReadFile</a>( std::string_view fileReadPath )</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mFile2Read.close();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    mFile2ReadPath = fileReadPath;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mFile2Read.open( fileReadPath.data(),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                     std::ios_base::binary | std::ios_base::in );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> mFile2Read.is_open() ? <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a> : <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classc_file_worker.html#a13773987881a53f8165bd691927be482">   42</a></span>&#160;std::tuple&lt; std::string, eErrStatus &gt; <a class="code" href="classc_file_worker.html#a13773987881a53f8165bd691927be482">cFileWorker::applyAlgorithm</a>( <a class="code" href="classc_abstract_algorithm.html">cAbstractAlgorithm</a> &amp;algorithm, <a class="code" href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a> action )</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span>( !mFile2Read.is_open() || !mFile2Write.is_open() )</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> std::make_tuple( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a> );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="group___common.html#gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a">ACT_TYPE_DECOMPR</a> == action &amp;&amp; !checkPostfix( algorithm ) )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> std::make_tuple( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7">ERR_STATUS_BAD_POSTFIX</a> );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">auto</span> [ buffer, readStatus ] = readData();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a> != readStatus )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> std::make_tuple( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">ERR_STATUS_EMPTY_SRC_FILE</a> );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::string resultData( action == <a class="code" href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">ACT_TYPE_COMPR</a> ? algorithm.<a class="code" href="classc_abstract_algorithm.html#a2a9ec01d2ecb5ffa715729d24094c0c8">compress</a>( buffer )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                     : algorithm.<a class="code" href="classc_abstract_algorithm.html#ae6f252478c22f1c41848482b42a85c20">decompress</a>( buffer ) );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>( resultData.empty() )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> std::make_tuple( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb">ERR_STATUS_BAD_ALG</a> );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    mFile2Write.write( <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>( resultData.data() ), resultData.size() );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    mFile2Write.flush();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::string newName;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span>( action == <a class="code" href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">ACT_TYPE_COMPR</a> )</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        newName = mFile2ReadPath + algorithm.<a class="code" href="classc_abstract_algorithm.html#a26e105e266f764658e7a678e14e30b84">getPostfix</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        newName = mFile2ReadPath;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        newName.erase( newName.rfind( algorithm.<a class="code" href="classc_abstract_algorithm.html#a26e105e266f764658e7a678e14e30b84">getPostfix</a>() ) );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        newName.insert( newName.rfind( <span class="charliteral">&#39;/&#39;</span> ) + 1, 1, <span class="charliteral">&#39;_&#39;</span> );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    mFile2Write.close();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    QFile::rename( QString( mFile2WritePath.data() ), QString::fromStdString( newName ) );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> std::make_tuple( newName, <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a> );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">bool</span> cFileWorker::checkPostfix( <span class="keyword">const</span> <a class="code" href="classc_abstract_algorithm.html">cAbstractAlgorithm</a> &amp;algorithm )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> dotPos = mFile2ReadPath.find_last_of(<span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span>( std::string::npos == dotPos )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> curPostfix = mFile2ReadPath.substr( dotPos );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span>( algorithm.<a class="code" href="classc_abstract_algorithm.html#a26e105e266f764658e7a678e14e30b84">getPostfix</a>() != curPostfix )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;std::tuple&lt; std::string, eErrStatus &gt; cFileWorker::readData( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    QFileInfo fInfo( QString( mFile2ReadPath.data() ) );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> FILE_READ_SIZE =fInfo.size();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span>( 0 == FILE_READ_SIZE )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> std::make_tuple( std::string(), <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">ERR_STATUS_EMPTY_SRC_FILE</a> );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">symbol_t</a> *rawBuffer = <span class="keyword">new</span> <a class="code" href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">symbol_t</a>[ FILE_READ_SIZE ];</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    mFile2Read.seekg( 0 );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    mFile2Read.read( <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>( rawBuffer ), FILE_READ_SIZE );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    std::string buffer;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    buffer.reserve( FILE_READ_SIZE );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; FILE_READ_SIZE; i++ )</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        buffer += ( rawBuffer[ i ] );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">delete</span>[] rawBuffer;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> std::make_tuple( std::move( buffer ), <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="ac_file_worker_8h_html"><div class="ttname"><a href="c_file_worker_8h.html">cFileWorker.h</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_a13773987881a53f8165bd691927be482"><div class="ttname"><a href="classc_file_worker.html#a13773987881a53f8165bd691927be482">cFileWorker::applyAlgorithm</a></div><div class="ttdeci">std::tuple&lt; std::string, eErrStatus &gt; applyAlgorithm(cAbstractAlgorithm &amp;algorithm, eTypeOfActions action)</div><div class="ttdoc">Применить алгоритм к выбранным файлам</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00042">cFileWorker.cpp:42</a></div></div>
+<div class="ttc" id="agroup___common_html_ga5ce4e82cb71185769872198fdb1e41c9"><div class="ttname"><a href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a></div><div class="ttdeci">eErrStatus</div><div class="ttdoc">Ошибки в программе</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00033">common.h:33</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7">ERR_STATUS_BAD_POSTFIX</a></div><div class="ttdeci">@ ERR_STATUS_BAD_POSTFIX</div><div class="ttdoc">Ошибка расширения файла для декомпрессии</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00038">common.h:38</a></div></div>
+<div class="ttc" id="aclassc_abstract_algorithm_html_a2a9ec01d2ecb5ffa715729d24094c0c8"><div class="ttname"><a href="classc_abstract_algorithm.html#a2a9ec01d2ecb5ffa715729d24094c0c8">cAbstractAlgorithm::compress</a></div><div class="ttdeci">virtual std::string compress(const std::string &amp;oldData)=0</div><div class="ttdoc">Интерфейс для сжатия данных</div></div>
+<div class="ttc" id="agroup___common_html_ga9edeedce6da924f2999b9f006292d733"><div class="ttname"><a href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a></div><div class="ttdeci">eTypeOfActions</div><div class="ttdoc">Возможные действия пользователя</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00025">common.h:25</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a></div><div class="ttdeci">@ ERR_STATUS_SUCCESS</div><div class="ttdoc">Без ошибок</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00035">common.h:35</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_a9b5847e31c62f43f8f35665a6a158dbc"><div class="ttname"><a href="classc_file_worker.html#a9b5847e31c62f43f8f35665a6a158dbc">cFileWorker::updateWriteFile</a></div><div class="ttdeci">eErrStatus updateWriteFile(std::string_view fileWritePath)</div><div class="ttdoc">Обновить имя файла для записи результата</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00023">cFileWorker.cpp:23</a></div></div>
+<div class="ttc" id="aclassc_abstract_algorithm_html_ae6f252478c22f1c41848482b42a85c20"><div class="ttname"><a href="classc_abstract_algorithm.html#ae6f252478c22f1c41848482b42a85c20">cAbstractAlgorithm::decompress</a></div><div class="ttdeci">virtual std::string decompress(const std::string &amp;oldData)=0</div><div class="ttdoc">Интерфейс для распаковки данных</div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a></div><div class="ttdeci">@ ERR_STATUS_BAD_FILE_OPEN</div><div class="ttdoc">Ошибка при открытии файла</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00037">common.h:37</a></div></div>
+<div class="ttc" id="aclassc_file_worker_html_ab716747aa7a62e8006c8f25afd99ccba"><div class="ttname"><a href="classc_file_worker.html#ab716747aa7a62e8006c8f25afd99ccba">cFileWorker::updateReadFile</a></div><div class="ttdeci">eErrStatus updateReadFile(std::string_view fileReadPath)</div><div class="ttdoc">Обновить имя файла для чтения исходных данных</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00033">cFileWorker.cpp:33</a></div></div>
+<div class="ttc" id="agroup___common_html_gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a"><div class="ttname"><a href="group___common.html#gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a">ACT_TYPE_DECOMPR</a></div><div class="ttdeci">@ ACT_TYPE_DECOMPR</div><div class="ttdoc">Распаковка</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00028">common.h:28</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">ERR_STATUS_EMPTY_SRC_FILE</a></div><div class="ttdeci">@ ERR_STATUS_EMPTY_SRC_FILE</div><div class="ttdoc">Ошибка выбора пустого файла для сжатия</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00039">common.h:39</a></div></div>
+<div class="ttc" id="aclassc_abstract_algorithm_html_a26e105e266f764658e7a678e14e30b84"><div class="ttname"><a href="classc_abstract_algorithm.html#a26e105e266f764658e7a678e14e30b84">cAbstractAlgorithm::getPostfix</a></div><div class="ttdeci">virtual std::string getPostfix(void) const =0</div><div class="ttdoc">Получить постфикс</div></div>
+<div class="ttc" id="aclassc_file_worker_html_a28c71c76f6377511c7875374147a9880"><div class="ttname"><a href="classc_file_worker.html#a28c71c76f6377511c7875374147a9880">cFileWorker::~cFileWorker</a></div><div class="ttdeci">~cFileWorker(void)</div><div class="ttdoc">Деструктор класса</div><div class="ttdef"><b>Definition:</b> <a href="c_file_worker_8cpp_source.html#l00016">cFileWorker.cpp:16</a></div></div>
+<div class="ttc" id="agroup___common_html_gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca"><div class="ttname"><a href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">ACT_TYPE_COMPR</a></div><div class="ttdeci">@ ACT_TYPE_COMPR</div><div class="ttdoc">Сжатие</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00027">common.h:27</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb">ERR_STATUS_BAD_ALG</a></div><div class="ttdeci">@ ERR_STATUS_BAD_ALG</div><div class="ttdoc">Ошибка при выполнении алгоритма</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00036">common.h:36</a></div></div>
+<div class="ttc" id="aclassc_abstract_algorithm_html"><div class="ttname"><a href="classc_abstract_algorithm.html">cAbstractAlgorithm</a></div><div class="ttdoc">Абстрактный класс алгоритмов сжатия данных</div><div class="ttdef"><b>Definition:</b> <a href="c_abstract_algorithm_8h_source.html#l00037">cAbstractAlgorithm.h:37</a></div></div>
+<div class="ttc" id="agroup___common_html_gae73ca2349858c3984fcf06836defc3b4"><div class="ttname"><a href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">symbol_t</a></div><div class="ttdeci">unsigned char symbol_t</div><div class="ttdoc">Псевдоним для считываемого байта</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00044">common.h:44</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_04b878e80dceb2b4f79e3ab50860695a.html">compressor</a></li><li class="navelem"><a class="el" href="dir_b956bca2627ac4899208259d650f1a0e.html">cFileWorker</a></li><li class="navelem"><a class="el" href="dir_52aaca357581ad69d123c48119020141.html">src</a></li><li class="navelem"><a class="el" href="c_file_worker_8cpp.html">cFileWorker.cpp</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

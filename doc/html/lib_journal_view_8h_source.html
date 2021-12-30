@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Исходный файл /home/alexandr/Useful/programming/c++/QT/compressor/compressor/lib/libJournalView/h/libJournalView.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('lib_journal_view_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">libJournalView.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_journal_view_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef C_JOURNAL_VIEW_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define C_JOURNAL_VIEW_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define MY_EXPORT __declspec(dllexport)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">   19</a></span>&#160;<span class="preprocessor">#define MY_EXPORT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QAbstractListModel&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C++&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classc_journal_model.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classc_journal_model.html">cJournalModel</a> final : <span class="keyword">public</span> QAbstractListModel</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <a class="code" href="classc_journal_model.html#af6c1570b72b3a6781e5f5087813086b4">cJournalModel</a>(<span class="keyword">const</span> QStringList &amp;strings,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            QObject *parent = <span class="keyword">nullptr</span>) noexcept;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <a class="code" href="classc_journal_model.html#af6c1570b72b3a6781e5f5087813086b4">cJournalModel</a>(QObject *parent = <span class="keyword">nullptr</span> ) noexcept;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <span class="keywordtype">int</span> <a class="code" href="classc_journal_model.html#aa8d34037fd0555b119cd4900e1217538">rowCount</a>(<span class="keyword">const</span> QModelIndex &amp;parent) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> QVariant <a class="code" href="classc_journal_model.html#a35b0906744c384625b960ddc0d01ebfc">data</a>(<span class="keyword">const</span> QModelIndex &amp;index, <span class="keywordtype">int</span> role) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="classc_journal_model.html#a11a8341f55ab80eaec18834cdc4f68a6">insertString</a>(QString str) noexcept;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="classc_journal_model.html#a11a8341f55ab80eaec18834cdc4f68a6">insertString</a>(QStringList str) noexcept;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> QStringList <a class="code" href="classc_journal_model.html#a67309f18dfb5e7299bf66cc079239554">getStringList</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="classc_journal_model.html#acc048e04f2d48ae36a468f757df72a68">clear</a>() noexcept;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    QStringList stringList;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // C_JOURNAL_VIEW_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassc_journal_model_html_a67309f18dfb5e7299bf66cc079239554"><div class="ttname"><a href="classc_journal_model.html#a67309f18dfb5e7299bf66cc079239554">cJournalModel::getStringList</a></div><div class="ttdeci">QStringList getStringList() const noexcept</div><div class="ttdoc">Получение копии всех данных, хранящихся в контейнере</div></div>
+<div class="ttc" id="agroup___lib_journal_view_html_gaaa9df710e02c8e01771a4ec68fd51927"><div class="ttname"><a href="group___lib_journal_view.html#gaaa9df710e02c8e01771a4ec68fd51927">MY_EXPORT</a></div><div class="ttdeci">#define MY_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="lib_journal_view_8h_source.html#l00019">libJournalView.h:19</a></div></div>
+<div class="ttc" id="aclassc_journal_model_html_aa8d34037fd0555b119cd4900e1217538"><div class="ttname"><a href="classc_journal_model.html#aa8d34037fd0555b119cd4900e1217538">cJournalModel::rowCount</a></div><div class="ttdeci">int rowCount(const QModelIndex &amp;parent) const override</div><div class="ttdoc">Переопределенный метод. Возвращает количество строк</div></div>
+<div class="ttc" id="aclassc_journal_model_html_acc048e04f2d48ae36a468f757df72a68"><div class="ttname"><a href="classc_journal_model.html#acc048e04f2d48ae36a468f757df72a68">cJournalModel::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdoc">Очистка контейнера</div></div>
+<div class="ttc" id="aclassc_journal_model_html"><div class="ttname"><a href="classc_journal_model.html">cJournalModel</a></div><div class="ttdoc">Класс, реализующий модель для представлений</div><div class="ttdef"><b>Definition:</b> <a href="lib_journal_view_8h_source.html#l00028">libJournalView.h:28</a></div></div>
+<div class="ttc" id="aclassc_journal_model_html_a11a8341f55ab80eaec18834cdc4f68a6"><div class="ttname"><a href="classc_journal_model.html#a11a8341f55ab80eaec18834cdc4f68a6">cJournalModel::insertString</a></div><div class="ttdeci">void insertString(QString str) noexcept</div><div class="ttdoc">Добавление новой строки</div></div>
+<div class="ttc" id="aclassc_journal_model_html_af6c1570b72b3a6781e5f5087813086b4"><div class="ttname"><a href="classc_journal_model.html#af6c1570b72b3a6781e5f5087813086b4">cJournalModel::cJournalModel</a></div><div class="ttdeci">cJournalModel(const QStringList &amp;strings, QObject *parent=nullptr) noexcept</div><div class="ttdoc">Конструктор класса</div></div>
+<div class="ttc" id="aclassc_journal_model_html_a35b0906744c384625b960ddc0d01ebfc"><div class="ttname"><a href="classc_journal_model.html#a35b0906744c384625b960ddc0d01ebfc">cJournalModel::data</a></div><div class="ttdeci">QVariant data(const QModelIndex &amp;index, int role) const override</div><div class="ttdoc">Переопределенный метод. Возвращает данные, хранящиеся под данной ролью для элемента на который ссылае...</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_04b878e80dceb2b4f79e3ab50860695a.html">compressor</a></li><li class="navelem"><a class="el" href="dir_90f292d279203ae41648f21621acc50f.html">lib</a></li><li class="navelem"><a class="el" href="dir_c2a8b260524b0d31356ae04a962f7305.html">libJournalView</a></li><li class="navelem"><a class="el" href="dir_b3976491cacf86c332d0516db1a33f09.html">h</a></li><li class="navelem"><a class="el" href="lib_journal_view_8h.html">libJournalView.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

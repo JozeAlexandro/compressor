@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Исходный файл /home/alexandr/Useful/programming/c++/QT/compressor/compressor/common.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('common_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">common.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="common_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef COMMON_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define COMMON_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="group___common.html#ga3e078e3d8ed816726356535bf22ac87d">   17</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="group___common.html#ga3e078e3d8ed816726356535bf22ac87d">eTypeOfComprAlgorithm</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="group___common.html#gga3e078e3d8ed816726356535bf22ac87daefc071270fb1a04fd6319436f31f0dd3">   19</a></span>&#160;    <a class="code" href="group___common.html#gga3e078e3d8ed816726356535bf22ac87daefc071270fb1a04fd6319436f31f0dd3">ALG_TYPE_RLE</a> = 0, </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group___common.html#gga3e078e3d8ed816726356535bf22ac87da0b00810b70262ca6a23a08832e54105f">   20</a></span>&#160;    <a class="code" href="group___common.html#gga3e078e3d8ed816726356535bf22ac87da0b00810b70262ca6a23a08832e54105f">ALG_TYPE_HFMN</a> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="group___common.html#ga9edeedce6da924f2999b9f006292d733">   25</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">   27</a></span>&#160;    <a class="code" href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">ACT_TYPE_COMPR</a>, </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group___common.html#gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a">   28</a></span>&#160;    <a class="code" href="group___common.html#gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a">ACT_TYPE_DECOMPR</a> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">   33</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">   35</a></span>&#160;    <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a>, </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb">   36</a></span>&#160;    <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb">ERR_STATUS_BAD_ALG</a>, </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">   37</a></span>&#160;    <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a>, </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7">   38</a></span>&#160;    <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7">ERR_STATUS_BAD_POSTFIX</a>, </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">   39</a></span>&#160;    <a class="code" href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">ERR_STATUS_EMPTY_SRC_FILE</a> </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">   44</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">symbol_t</a> = <span class="keywordtype">unsigned</span> char;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // COMMON_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agroup___common_html_ga3e078e3d8ed816726356535bf22ac87d"><div class="ttname"><a href="group___common.html#ga3e078e3d8ed816726356535bf22ac87d">eTypeOfComprAlgorithm</a></div><div class="ttdeci">eTypeOfComprAlgorithm</div><div class="ttdoc">&lt; Вектор</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00017">common.h:17</a></div></div>
+<div class="ttc" id="agroup___common_html_gga3e078e3d8ed816726356535bf22ac87daefc071270fb1a04fd6319436f31f0dd3"><div class="ttname"><a href="group___common.html#gga3e078e3d8ed816726356535bf22ac87daefc071270fb1a04fd6319436f31f0dd3">ALG_TYPE_RLE</a></div><div class="ttdeci">@ ALG_TYPE_RLE</div><div class="ttdoc">Алгоритм RLE.</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00019">common.h:19</a></div></div>
+<div class="ttc" id="agroup___common_html_ga5ce4e82cb71185769872198fdb1e41c9"><div class="ttname"><a href="group___common.html#ga5ce4e82cb71185769872198fdb1e41c9">eErrStatus</a></div><div class="ttdeci">eErrStatus</div><div class="ttdoc">Ошибки в программе</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00033">common.h:33</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad4c627a833220d62b04be5a7b134a4c7">ERR_STATUS_BAD_POSTFIX</a></div><div class="ttdeci">@ ERR_STATUS_BAD_POSTFIX</div><div class="ttdoc">Ошибка расширения файла для декомпрессии</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00038">common.h:38</a></div></div>
+<div class="ttc" id="agroup___common_html_ga9edeedce6da924f2999b9f006292d733"><div class="ttname"><a href="group___common.html#ga9edeedce6da924f2999b9f006292d733">eTypeOfActions</a></div><div class="ttdeci">eTypeOfActions</div><div class="ttdoc">Возможные действия пользователя</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00025">common.h:25</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9ad6b127b72c16647b744b88ef6bbaa7ff">ERR_STATUS_SUCCESS</a></div><div class="ttdeci">@ ERR_STATUS_SUCCESS</div><div class="ttdoc">Без ошибок</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00035">common.h:35</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a0fe952b57dbd850f40542ad20bc2f1e6">ERR_STATUS_BAD_FILE_OPEN</a></div><div class="ttdeci">@ ERR_STATUS_BAD_FILE_OPEN</div><div class="ttdoc">Ошибка при открытии файла</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00037">common.h:37</a></div></div>
+<div class="ttc" id="agroup___common_html_gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a"><div class="ttname"><a href="group___common.html#gga9edeedce6da924f2999b9f006292d733ad7ad092d2eb07b8587ab2dc9f9d4d81a">ACT_TYPE_DECOMPR</a></div><div class="ttdeci">@ ACT_TYPE_DECOMPR</div><div class="ttdoc">Распаковка</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00028">common.h:28</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9aac64aba6d33e9cdd90de69c3fefce757">ERR_STATUS_EMPTY_SRC_FILE</a></div><div class="ttdeci">@ ERR_STATUS_EMPTY_SRC_FILE</div><div class="ttdoc">Ошибка выбора пустого файла для сжатия</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00039">common.h:39</a></div></div>
+<div class="ttc" id="agroup___common_html_gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca"><div class="ttname"><a href="group___common.html#gga9edeedce6da924f2999b9f006292d733a9af9d4c9f04708566ae0a5eab1742cca">ACT_TYPE_COMPR</a></div><div class="ttdeci">@ ACT_TYPE_COMPR</div><div class="ttdoc">Сжатие</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00027">common.h:27</a></div></div>
+<div class="ttc" id="agroup___common_html_gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb"><div class="ttname"><a href="group___common.html#gga5ce4e82cb71185769872198fdb1e41c9a14b7222ba43978224a44ad4650f6d5bb">ERR_STATUS_BAD_ALG</a></div><div class="ttdeci">@ ERR_STATUS_BAD_ALG</div><div class="ttdoc">Ошибка при выполнении алгоритма</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00036">common.h:36</a></div></div>
+<div class="ttc" id="agroup___common_html_gga3e078e3d8ed816726356535bf22ac87da0b00810b70262ca6a23a08832e54105f"><div class="ttname"><a href="group___common.html#gga3e078e3d8ed816726356535bf22ac87da0b00810b70262ca6a23a08832e54105f">ALG_TYPE_HFMN</a></div><div class="ttdeci">@ ALG_TYPE_HFMN</div><div class="ttdoc">Алгоритм Хаффмана</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00020">common.h:20</a></div></div>
+<div class="ttc" id="agroup___common_html_gae73ca2349858c3984fcf06836defc3b4"><div class="ttname"><a href="group___common.html#gae73ca2349858c3984fcf06836defc3b4">symbol_t</a></div><div class="ttdeci">unsigned char symbol_t</div><div class="ttdoc">Псевдоним для считываемого байта</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00044">common.h:44</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_04b878e80dceb2b4f79e3ab50860695a.html">compressor</a></li><li class="navelem"><a class="el" href="common_8h.html">common.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

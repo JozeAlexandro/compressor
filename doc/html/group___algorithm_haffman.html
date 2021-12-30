@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compressor: Алгоритм Хаффмана</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Compressor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для сжатия/распаковки файлов с помощью нескольких алгоритмов</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group___algorithm_haffman.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a>  </div>
+  <div class="headertitle">
+<div class="title">Алгоритм Хаффмана<div class="ingroups"><a class="el" href="group___algorithm.html">Алгоритмы</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Модуль, реализующий сжатие данных алгоритмом Хаффмана  
+<a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф связей класса Алгоритм Хаффмана:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___algorithm_haffman.png" border="0" usemap="#group______algorithm__haffman" alt=""/></div>
+<map name="group______algorithm__haffman" id="group______algorithm__haffman">
+<area shape="rect" href="group___algorithm.html" title="Предназначен для реализации алгоритмов сжатия." alt="" coords="5,5,107,31"/>
+<area shape="rect" title="Модуль, реализующий сжатие данных алгоритмом Хаффмана" alt="" coords="155,5,323,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classc_algorithm_haffman.html">cAlgorithmHaffman</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображение  <a href="classc_algorithm_haffman.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Модуль, реализующий сжатие данных алгоритмом Хаффмана </p>
+<p>Кодирование Хаффмана. Основа - бинарные деревья Хаффмана. Каждый узел представляет собой сивол, его частоту и ссылку на дочерние элементы.</p>
+<p>Для создания дерева используется очередь с приоритетом. Узел с минимальной частотой имеет наивысший приоритет. Шаги построения дерева:</p><ul>
+<li>Создать узел для каждого символа и добавить его в очередь с приоритетом</li>
+<li>Пока в очереди &gt; 1 листа &ndash; Удалить 2 узла с наивысшим приоритетом (наименьшей частотой) из очереди &ndash; Создать новый узел дерева, где вышеудаленные узлы будут наследниками, а частота появления = сумме частот наследников &ndash; Добавить созданный узел в очередь</li>
+<li>Последний оставшийся элемент - корень дерева</li>
+</ul>
+<p>После создания дерева создаем отображение элемента на его код. Все элементы будут находиться именно в листьях дерева. Для получения кода элемента проходим по дереву от корня до элемента. Каждый спуск по левой ветви - +0 к коду, каждый спуск по правой ветви +1 к коду.</p>
+<p>Для успешного декодирования сжатых данных алгоритму требуется получить дерево из закодированных данных. Без потерь по памяти сделать это невозможно. Решение: добавлять служебную информацию в начало любых закодированных данных. Выделено 4 байта под размер таблицы. Т.е. закодированные данные: [ &lt; Размер таблицы (4 байта) &gt; &lt; Непосредственно таблица, размером, определенном в предыдущем блоке &gt; &lt; Данные &gt; ].</p>
+<p>Помимо этого существует еще одна проблема: физически нет возможности записывать информацию в файл меньшую, чем 1 байт, но кодирование по Хаффману подразумевает, что количество бит в кодах символов не обязано быть кратным байту. Пояснение, предположим, исходный файл состоит из "abc". После построения дерева получается, что код символа a = 0, b = 11, c = 10. Тогда, сжатые данные (без учета служебной информации) будут: 0 1110. Это меньше байта и запишется в исходные данные, как 0000 1110 или 0111 0000, в зависимости от реализации. В любом случае, декодирование будет некорректным. В первом случае: результат = aaaabc, во втором: abcaaa. Для решения этого принято хранить количество значащих бит в служебном месте сжатого файла. Для этого выделено 8 байт.</p>
+<p>Так как для декодирования данных необходимо считывать информацию побитно и после каждого считанного бита сравнивать результат буфера со всеми кодами в поисках символа - декомпрессия методом Хаффмана не самое быстрое предприятие. Поэтому на файлах, имеющих большой размер алгоритм выполняется довольно долго.</p>
+<p>С учетом того, что алгоритм добавляет 8 + 4 + X байт информации в результат сжатия (8 - Количество бит, 4 - размер таблицы, X - таблица) большого смысла от сжатия файлов малых размеров нет.</p>
+<p>Реализован с поиощью класса <a class="el" href="classc_algorithm_haffman.html">cAlgorithmHaffman</a> </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="Алгоритмы" name="Алгоритмы">
+<area shape="rect" id="node1" href="$group___algorithm_abstract.html" title="Модуль, содержащий интерфейс для реализаций алгоритмов сжатия." alt="" coords="184,5,293,45"/>
+<area shape="rect" id="node2" href="$group___algorithm_r_l_e.html" title="Модуль, реализующий алгоритм RLE." alt="" coords="179,70,298,95"/>
+<area shape="rect" id="node3" title="Предназначен для реализации алгоритмов сжатия." alt="" coords="5,70,107,95"/>
+<area shape="rect" id="node4" href="$group___algorithm_haffman.html" title="Модуль, реализующий сжатие данных алгоритмом Хаффмана" alt="" coords="155,119,323,145"/>
+</map>
